@@ -1,0 +1,17 @@
+html
+	body
+		<h5 style="font-size:25px;padding:20 20px 0px; 20px">Image Uploader</h5>
+		<div style="padding:0px 30px 30px 30px;border-bottom:2px solid grey">
+		form(action = "fileupload",method="post" enctype="multipart/form-data")
+			<label>Upload images</label>
+			<input type = "file" name = "filetoupload">
+			<input type = "submit" value = "Submit">
+		</div>	
+			
+		<ul style="padding:0px 30px 0px 30px;margin-left:20px">
+		each info in data	
+			li
+			img.className#IdName(src="/img/"+info alt=info name=info width='80px')
+			<label style="color:green;margin-left:10px">#{info}</label>
+		if data.length<1
+			<label style="color:red;margin-left:10px">No image is present for displaying</label>
